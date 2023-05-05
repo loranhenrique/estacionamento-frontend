@@ -1,0 +1,10 @@
+<div class="vagas">
+  <h1 class="vagas__titulo">Contador de vagas</h1>
+  <div class="vagas__container"
+    *ngFor="let vaga of viewModel.vagas">
+    <bra-card-vaga [titulo]="vaga.nome"
+      [status]="vaga.status"></bra-card-vaga>
+  </div>
+  <h1 class="vagas__quantidade-vagas">Vagas disponíveis:
+    {{ viewModel.vagasDisponiveis }}</h1>
+</div>

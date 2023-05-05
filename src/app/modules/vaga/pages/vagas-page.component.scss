@@ -1,0 +1,25 @@
+@import 'base-styles';
+
+.vagas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__titulo,
+  &__quantidade-vagas {
+    color: #212121;
+    padding: 18px;
+    font-size: to-vw(32px);
+  }
+
+  &__quantidade-vagas {
+    font-size: to-vw(24px);
+  }
+
+  &__container {
+    display: flex;
+    padding: 32px;
+  }
+}

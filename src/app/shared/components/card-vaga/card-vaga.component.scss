@@ -1,0 +1,71 @@
+@import 'base-styles';
+
+.card {
+  width: 100px;
+  height: 164px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+
+  &__card-inner {
+    display: flex;
+    width: inherit;
+    height: inherit;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__titulo {
+    font-size: to-vw(18px);
+    color: #212121;
+  }
+
+  &__status {
+    font-size: to-vw(13px);
+    color: #212121;
+    margin-top: 4px;
+  }
+
+  &__circle {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(#b0e633, #53ef7d);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+  }
+
+  &__circle:nth-child(1) {
+    top: -20px;
+    left: -20px;
+  }
+
+  &__circle:nth-child(2) {
+    bottom: -20px;
+    right: -20px;
+    animation-name: move-down1;
+  }
+
+  &-ocupada & {
+    &__circle {
+      background: radial-gradient(#f44e3f, #f40000);
+    }
+  }
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
